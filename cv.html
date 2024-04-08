@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>kk - bholo.com</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+.main-content{
+    min-height: 100vh;
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.left-section{
+    grid-column: span 2;
+    height: 100%;
+    background-color: #00324A;
+}
+.right-section{
+    grid-column: span 5;
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+
+.left-content{
+    padding: 2rem 3rem;
+}
+.profile{
+    width: 100%;
+    border-bottom: 1px solid #002333;
+}
+
+.image{
+    width: 100%;
+    text-align: center;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #002333;
+    
+}
+
+.name{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.2rem 0;
+}
+
+.career{
+    font-size: 1.2rem;
+    color: #94D9EA;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.main-title{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f7f7f7ec;
+    padding-top: 3rem;
+}
+
+.contact-info ul{
+    padding-top: 2rem;
+}
+
+.contact-info ul li{
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: #718096;
+}
+.contact-info ul li i{
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    color: #2D9CDB;
+}
+
+.skills-section ul{
+    padding-top: 2rem;
+}
+.skills-section ul li{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .4rem 0;
+}
+
+.progress-bar{
+    width: 100%;
+    height: .4rem;
+    background-color: #2f81ed5b;
+    position: relative;
+    border-radius: 12px;
+}
+.progress{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #2D9CDB;
+    border-radius: 12px;
+}
+.js-progress{
+    width: 70%;
+}
+.ps-progress{
+    width: 90%;
+}
+.j-progress{
+    width: 85%;
+}
+.c-progress{
+    width: 40%;
+}
+.n-progress{
+    width: 63%;
+}
+.w-progress{
+    width: 78%;
+}
+
+
+.skill-title{
+    text-transform: uppercase;
+    color: #f7f7f7;
+    font-size: 1rem;
+}
+
+.sub-title{
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #f7f7f7;
+}
+
+.sub-para{
+    color: #ccc;
+    padding: .4rem 0;
+}
+
+.references-section li{
+    color: #ccc;
+    padding: .2rem 0;
+}
+.references-section li i{
+    padding-right: .5rem;
+    font-size: 1.2rem;
+    color: #2D9CDB;
+}
+
+.right-main-content{
+    padding: 2rem 3rem;
+}
+
+
+.right-title{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #2F80ED;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.right-title::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .2rem;
+    background-color: #ccc;
+    border-radius: 12px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.para{
+    line-height: 1.6rem;
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.sect{
+    padding-bottom: 2rem;
+}
+
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tl-title{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #002333;
+    text-transform: uppercase;
+}
+.tl-title-2{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #2D9CDB;
+    text-transform: uppercase;
+}
+
+.tl-content{
+    border-left: 1px solid #ccc;
+    padding-left: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.tl-title-2::before{
+    content: "";
+    position: absolute;
+    width: .7rem;
+    height: .7rem;
+    background-color: #2D9CDB;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    left: 0;
+}
+
+/*Media Querries*/
+@media screen and (max-width:823px){
+    .right-title::after{
+        width: 40%;
+    }
+}
+@media screen and (max-width:681px){
+    .right-title::after{
+        width: 30%;
+    }
+}
+@media screen and (max-width:780px){
+    .timeline{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width:780px){
+    .left-section{
+        grid-column: span 3;
+    }
+    .right-section{
+        grid-column: span 4;
+    }
+}
+@media screen and (max-width:1200px){
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .profile img{
+        width: 40%;
+    }
+}
+@media screen and (max-width:700px){
+    .profile img{
+        width: 60%;
+    }
+}
+@media screen and (max-width:390px){
+    .name{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+    </style>
+    <head>
+        <body>
+             
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>123 kk, New York, karachi</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+92 3327977190</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href="https://m.facebook.com/uzair.shakeel.9237?eav=AfaNaOVBmuo7pQydFIDDuSAzPCXqkSFL9-vB_HwvuraWv6LPXxKBsqKe34ABMzfUbmE&paipv=0"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href="https://www.linkedin.com/in/uzair-kaim-khani-6290a024b/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+            <img  src="img/icon.png"width="120px" height="150px">
+            <h2></h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="skill.html" class="nav-item nav-link">Skill</a>
+                <a href="cv.html" class="nav-item nav-link">CV</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="feature.html" classs="dropdown-item">Features</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get Started<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!----CV Start-->
+    <center>
+        <h1>Resume</h1>
+    </center>
+    <main class="main-content">
+        <section class="left-section">
+            <div class="left-content">
+                <div class="profile">
+                    <div class="image">
+                        <img src="img/team1.jpg" alt="">
+                    </div>
+                    <h2 class="name">Uzair Shakeeel</h2>
+                    <p class="career">Software Engineer</p>
+                </div>
+                <div class="contact-info">
+                    <h3 class="main-title">Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            +92 3327977190
+                        </li>
+                        <li>
+                            <i class="fa fa-fax"></i>
+                            uzairkk020@gmail.com
+                        </li>
+                        <li>
+                            <i class="fa fa-globe"></i>
+                            www.uzair.com              
+                                 </li>
+                        <li>
+                            <i class="fa fa-facebook"></i>
+                            https://www.facebook.com/uzair.shakeel.9237
+                        </li>
+                        <li>
+                            <i class="fa fa-twitter"></i>
+                            https://twitter.com/uzairkk020
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            PakaColony Karachi ,Pakistan
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills-section">
+                    <h3 class="main-title">Skills</h3>
+                    <ul>
+                        <li>
+                            
+                            
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Photoshop</p>
+                            <div class="progress-bar">
+                                <div class="progress ps-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Java</p>
+                            <div class="progress-bar">
+                                <div class="progress j-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">C++</p>
+                            <div class="progress-bar">
+                                <div class="progress c-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Ruby</p>
+                            <div class="progress-bar">
+                                <div class="progress ps-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Node js</p>
+                            <div class="progress-bar">
+                                <div class="progress n-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Wordpress</p>
+                            <div class="progress-bar">
+                                <div class="progress ps-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">illustrator</p>
+                            <div class="progress-bar">
+                                <div class="progress ps-progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="skill-title">Ms Office</p>
+                            <div class="progress-bar">
+                                <div class="progress ps-progress"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="references-section">
+                    <h3 class="main-title">References</h3>
+                    <div class="referee">
+                        <h6 class="sub-title">References will be furnished upon request.</h6>
+                        <p class="sub-para"></p>
+                        <ul>
+                       
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right-section">
+            <div class="right-main-content">
+                <section class="about sect">
+                    <h2 class="right-title">About Me</h2>
+                    <p class="para">
+                        As a computer science student, I am currently pursuing a degree in the field of computer science, which encompasses the study of algorithms, programming languages, software development, and various other aspects of computing. My coursework involves gaining a deep understanding of computer systems, data structures, and problem-solving techniques. I am also familiar with programming languages such as Java, Python, and C++, and have experience in developing software applications and working with databases. Through my studies, I am constantly honing my analytical and critical thinking skills, as well as my ability to collaborate effectively in team projects. I am passionate about exploring new technologies and staying up-to-date with the latest advancements in the field. With a strong foundation in computer science principles, I am eager to apply my knowledge and skills to contribute to the ever-evolving world of technology.. <br>
+                        <br>
+                    </p>
+                </section>
+
+                <section class="experince sect">
+                    <h2 class="right-title">Experience</h2>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">Data Entry</h5>
+                            <p class="para">six Month</p>
+                            <h5 class="tl-title">Marketing for Mart</h5>
+                            <p class="para">one Year</p>
+                        </div>
+                        <div class="right-tl-content">
+                            <div class="tl-content">
+                                <h5 class="tl-title-2">Junior Developer</h5>
+                                <p class="para">
+                                    What Does a Junior Software Developer Do? Junior software developers provide assistance to support continuous improvement throughout the development life cycle of computer applications. They write basic code, maintain applications, address bugs, and deploy app enhancements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title-2">Certificate</h5>
+                            <p class="para">Ms Word</p>
+                            <p class="para">Ms Excel</p>
+                            <p class="para">Power Point</p>
+                            <p class="para">Ethical Hacking</p>
+                            <p class="para">Speed Typing</p>
+                            <p class="para">Web responsive-design</p>
+                            <p class="para">Web development</p>
+                        </div>
+                        <div class="right-tl-content">
+                            <div class="tl-content">
+                                <h5 class="tl-title-2">Lead Web developer</h5>
+                                <p class="para">
+                                    In addition to the abilities of a Senior Web Developer, this level is responsible for ensuring multiple Web systems integrate. They have a high level of technical expertise in Web platforms, applications, tools, and methodologies..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                           
+                        </div>
+                        <div class="right-tl-content">
+                            <div class="tl-content">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">language</h5>
+                            <p class="para">Urdu</p>
+                            <p class="para">English</p>
+                        </div>
+                        <div class="right-tl-content">
+                            <div class="tl-content">
+                                <h5 class="tl-title-2">Senior Developer</h5>
+                                <p class="para">
+                                    Senior developers are the top-tier frontline developers in the field. Having worked in the field for several years, they are essentially mentors and overseers of lower-level developers. They are also the developers that can offer their expertise toward the marketing and business transactions of the company.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="education sect">
+                    <h2 class="right-title">education</h2>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                           
+                            <p class="para">Matriculation From Mirpurkhas Board</p>
+                            <p class="para">Intermediate From Mirpurkhas Board</p>
+                            <p class="para">Information Technology Diploma From Aptechsite Nazimabad</p>
+                            <p class="para">Undergraguate From Dawood University Technology Karachi Student Of Computer Science</p>
+
+                        </div>
+                        
+                    </div>
+                    <div class="timeline">
+                        <div class="left-tl-content">
+                            <h5 class="tl-title">University of Dawood</h5>
+                            <p class="para">2018 - Present</p>
+                        </div>
+                        <div class="right-tl-content">
+                            <div class="tl-content">
+                                <h5 class="tl-title-2">Computer Science</h5>
+                                <p class="para">Computer science is the study of computers and computational systems. It is a broad field which includes everything from the algorithms that make up software to how software interacts with hardware to how well software is developed and designed. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="awards sect">
+                    <h2 class="">Personal Information</h2>
+                    
+                        <div class="left-tl-content">
+                            
+                            <p class="para">Father Name : Shakeel Ahmed</p>
+                            <p class="para">CNIC : 44101-4414899-1</p>
+                            <p class="para">Date of Birth : 06-06-2004</p>
+                            <p class="para">Nationality : Pakistan</p>
+                            <p class="para">Religion : Islam</p>
+                            <p class="para">Marital Status : Singal</p>
+                        </div>
+                       
+                            </div>
+                        </div>
+                    </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <!----CV End-->
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Get In Touch</h4>
+                    <img  src="img/icon.png"width="120px" height="150px">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Karachi</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 3327977190</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>uzairkk020@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Popular Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-white mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light me-1" href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light me-1" href="https://m.facebook.com/uzair.shakeel.9237?eav=AfaNaOVBmuo7pQydFIDDuSAzPCXqkSFL9-vB_HwvuraWv6LPXxKBsqKe34ABMzfUbmE&paipv=0"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light me-0" href="https://www.linkedin.com/in/uzair-kaim-khani-6290a024b/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">Your Site Name</a>, Uzair Kaim khani
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+        </body>
+    </head>
